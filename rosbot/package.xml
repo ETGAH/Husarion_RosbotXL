@@ -21,9 +21,7 @@
 
   <depend>rosbot_controller</depend>
   <depend>rosbot_description</depend>
-  <depend>rosbot_hardware_interfaces</depend>
   <depend>rosbot_localization</depend>
-  <depend>rosbot_moveit</depend>
   <depend>rosbot_utils</depend>
 
   <export>
