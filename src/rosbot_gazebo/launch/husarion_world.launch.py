@@ -25,7 +25,10 @@ by hand:
 
   ros2 launch rosbot_gazebo simulation.yaml \
       robot_model:=rosbot_xl configuration:=autonomy gz_world:=husarion_world \
-      x:=0.0 y:=0.0 z:=0.1 rviz:=True
+      x:=0.0 y:=0.0 z:=0.1 rviz:=False
+
+RViz is deliberately never auto-launched here - every chapter gives its own
+explicit `ros2 launch rosbot_description rviz.yaml` command instead.
 """
 
 from launch import LaunchDescription
@@ -49,7 +52,7 @@ def generate_launch_description():
             "x": "0.0",
             "y": "0.0",
             "z": "0.1",
-            "rviz": "True",
+            "rviz": "False",
         }.items(),
     )
 

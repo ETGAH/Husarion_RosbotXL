@@ -19,18 +19,22 @@
 UI-launchable ROSbot XL simulation entrypoint (ETGAH "Worlds" panel).
 
 The ETGAH Worlds panel only discovers `*.launch.py` files, so this wraps the
-existing `simulation.yaml` (world + robot spawn + bridge + controllers + EKF +
-RViz) as a single Python launch file the panel can list and run in one click -
+existing `simulation.yaml` (world + robot spawn + bridge + controllers + EKF)
+as a single Python launch file the panel can list and run in one click -
 no terminal command required. Equivalent to running by hand:
 
   ros2 launch rosbot_gazebo simulation.yaml \
       robot_model:=rosbot_xl configuration:=autonomy gz_world:=husarion_office \
-      x:=0.0 y:=0.0 z:=0.1 rviz:=True
+      x:=0.0 y:=0.0 z:=0.1 rviz:=False
 
 Defaults are pinned to this course's setup (ROSbot XL, autonomy sensor suite,
 husarion_office world, spawn pose matching config/nav2_params.yaml's AMCL
 initial pose). Override any of them from the Worlds panel's launch-argument
 fields the same way you would with `key:=value` on the command line.
+
+RViz is deliberately never auto-launched here - every chapter gives its own
+explicit `ros2 launch rosbot_description rviz.yaml` command instead, so
+students always know exactly which RViz config (if any) they're looking at.
 """
 
 from launch import LaunchDescription
@@ -54,7 +58,7 @@ def generate_launch_description():
             "x": "0.0",
             "y": "0.0",
             "z": "0.1",
-            "rviz": "True",
+            "rviz": "False",
         }.items(),
     )
 

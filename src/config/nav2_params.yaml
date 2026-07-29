@@ -213,7 +213,6 @@ map_server:
   ros__parameters:
     enable_stamped_cmd_vel: true
     use_sim_time: true
-    yaml_filename: /root/workspaces/rosbot_ws/docs/my_map.yaml
 
 map_saver:
   ros__parameters:
