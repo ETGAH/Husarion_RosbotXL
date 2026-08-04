@@ -180,9 +180,9 @@ limitations under the License.
       name="${robot_namespace_slash}${component_name_underscore}intel_realsense_d435_color"
       topic="${robot_namespace_slash}${component_name_slash}color/image_raw"
       frame_id="${tf_prefix}${component_name_underscore}color_optical_frame"
-      frequency="30"
-      width="1280"
-      height="720"
+      frequency="2"
+      width="16"
+      height="12"
       fov="${69.0/180.0*pi}" />
 
     <xacro:gz_sensor.depth_camera
@@ -190,9 +190,9 @@ limitations under the License.
       name="${robot_namespace_slash}${component_name_underscore}intel_realsense_d435_depth"
       topic="${robot_namespace_slash}${component_name_slash}depth/image_rect_raw"
       frame_id="${tf_prefix}${component_name_underscore}depth_optical_frame"
-      frequency="30"
-      width="1280"
-      height="720"
+      frequency="2"
+      width="16"
+      height="12"
       fov="${87.0/180.0*pi}"
       min_dist="0.28"
       max_dist="8.0"
