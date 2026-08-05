@@ -1,0 +1,13 @@
+lifecycle_manager:
+  ros__parameters:
+    enable_stamped_cmd_vel: true
+    use_sim_time: true
+    autostart: true
+    node_names:
+      - map_server
+      - amcl
+      - controller_server
+      - smoother_server
+      - planner_server
+      - behavior_server
+      - bt_navigator

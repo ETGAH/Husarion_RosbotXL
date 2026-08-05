@@ -36,6 +36,8 @@ launch:
       let:
         - name: gz_log_level
           value: '1'
+        - name: gz_headless_mode
+          value: 'True'
 
   - include:
       file: $(find-pkg-share rosbot_gazebo)/launch/spawn_robot.yaml
