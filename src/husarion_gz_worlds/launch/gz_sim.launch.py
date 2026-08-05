@@ -83,7 +83,7 @@ def generate_launch_description():
     declare_gz_world_arg = DeclareLaunchArgument(
         "gz_world",
         default_value=PathJoinSubstitution(
-            [FindPackageShare("husarion_gz_worlds"), "worlds", "husarion_world.sdf"]
+            [FindPackageShare("husarion_gz_worlds"), "worlds", "husarion_office.sdf"]
         ),
         description="Absolute path to SDF world file, or a single world name (e.g., 'husarion_world') to use from the husarion_gz_worlds/worlds directory.",
     )

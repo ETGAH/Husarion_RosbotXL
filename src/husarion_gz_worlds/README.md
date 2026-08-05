@@ -5,8 +5,7 @@ A repository containing sample worlds to run in the gazebo simulation.
 **Available worlds:**
 
 - `empty_with_plugins.sdf` - Empty world with attached plugins necessary for the proper operation of our robots,
-- `husarion_office.sdf` - World resembling the office we work in,
-- `husarion_world.sdf` - World representing our logo.
+- `husarion_office.sdf` - World resembling the office we work in.
 
 ## Quick start
 
@@ -38,14 +37,13 @@ ros2 launch husarion_gz_worlds gz_sim.launch.py
 | **gz_gui**           | Run simulation with specific GUI layout                                                                      | **`husarion_gz_worlds/`<br />`config/teleop.config`**     |
 | **gz_headless_mode** | Run the simulation in headless mode. Useful when a GUI is not needed or to reduce the amount of calculations | **False**                                                  |
 | **gz_log_level**     | Adjust the level of console output                                                                           | **1**                                                      |
-| **gz_world**         | Absolute path to SDF world file, or the name of a built-in world. (e.g., 'husarion_world')                   | **`husarion_gz_worlds/`<br />`worlds/husarion_world.sdf`** |
+| **gz_world**         | Absolute path to SDF world file, or the name of a built-in world. (e.g., 'husarion_office')                  | **`husarion_gz_worlds/`<br />`worlds/husarion_office.sdf`** |
 
 **Available built-in worlds:**
 
 - `cave`
 - `empty_with_plugins`
 - `husarion_office`
-- `husarion_world`
 - `rubicon`
 - `sonoma_raceway`
 
@@ -55,7 +53,3 @@ ros2 launch husarion_gz_worlds gz_sim.launch.py
 
 ![img1](./images/husarion_office1.png)
 ![img2](./images/husarion_office2.png)
-
-#### husarion_world.sdf
-
-![img3](./images/husarion_world.png)
