@@ -13,7 +13,7 @@ launch:
 
   - arg:
       name: use_sim
-      default: 'False'
+      default: 'True'
       description: Whether simulation is used.
       choice:
         - value: 'True'
