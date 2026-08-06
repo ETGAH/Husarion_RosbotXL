@@ -28,7 +28,7 @@ no terminal command required. Equivalent to running by hand:
       x:=0.0 y:=0.0 z:=0.1 rviz:=False
 
 Defaults are pinned to this course's setup (ROSbot XL, autonomy sensor suite,
-husarion_office world, spawn pose matching config/nav2_params.yaml's AMCL
+husarion_office world, spawn pose matching husarion_navigation's amcl.yaml
 initial pose). Override any of them from the Worlds panel's launch-argument
 fields the same way you would with `key:=value` on the command line.
 
