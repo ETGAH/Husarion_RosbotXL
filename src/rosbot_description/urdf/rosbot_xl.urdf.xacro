@@ -4,6 +4,7 @@
   <xacro:arg name="components_config" default="" />
   <xacro:arg name="configuration" default="basic" />
   <xacro:arg name="controller_config" default="" />
+  <xacro:arg name="include_antenna" default="False" />
   <xacro:arg name="include_camera_mount" default="False" />
   <xacro:arg name="manipulator_serial_port" default="/dev/ttyUSB0" />
   <xacro:arg name="mecanum" default="False" />
@@ -20,6 +21,7 @@
 
   <xacro:husarion.rosbot_xl
     controller_config="$(arg controller_config)"
+    include_antenna="$(arg include_antenna)"
     include_camera_mount="$(arg include_camera_mount)"
     mecanum="$(arg mecanum)"
     namespace="$(arg namespace)"

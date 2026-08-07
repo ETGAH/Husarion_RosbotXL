@@ -2,6 +2,7 @@
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
   <xacro:macro name="rosbot_xl"
     params="controller_config
+            include_antenna:=False
             include_camera_mount
             mecanum
             namespace
@@ -21,7 +22,9 @@
 
     <!-- BODY -->
     <xacro:body.body wheel_radius="${wheel_radius}" />
-    <xacro:antenna.antenna parent_link="cover_link" xyz="-0.155 -0.055 -0.02" rpy="-0.4 0.0 0.0" antenna_angle="0.3" />
+    <xacro:if value="${include_antenna}">
+      <xacro:antenna.antenna parent_link="cover_link" xyz="-0.155 -0.055 -0.02" rpy="-0.4 0.0 0.0" antenna_angle="0.3" />
+    </xacro:if>
     <xacro:if value="${include_camera_mount}">
       <xacro:camera_mount.camera_mount parent_link="cover_link" xyz="-0.1 0.0 0.0" />
     </xacro:if>

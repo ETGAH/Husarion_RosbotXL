@@ -48,7 +48,7 @@ limitations under the License.
       <visual>
         <origin xyz="0.0 0.0 0.0" rpy="${pi/2} 0.0 0.0" />
         <geometry>
-          <mesh filename="package://husarion_components_description/meshes/velodyne_puck.glb" />
+          <mesh filename="package://husarion_components_description/meshes/velodyne_puck.dae" />
         </geometry>
       </visual>
 

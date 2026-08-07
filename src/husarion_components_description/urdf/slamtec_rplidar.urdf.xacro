@@ -46,7 +46,7 @@ limitations under the License.
       <xacro:property name="dist_max" value="40.0" />
       <xacro:property name="dist_res" value="0.01" />
       <xacro:property name="std_dev" value="0.015" />
-      <xacro:property name="mesh" value="s3.glb" />
+      <xacro:property name="mesh" value="s3.dae" />
       <xacro:property name="collision">
         <origin xyz="0.0 0.0 ${0.0413/2.0}" rpy="0.0 0.0 0.0" />
         <geometry>
@@ -72,7 +72,7 @@ limitations under the License.
       <xacro:property name="dist_max" value="30.0" />
       <xacro:property name="dist_res" value="0.013" />
       <xacro:property name="std_dev" value="0.015" />
-      <xacro:property name="mesh" value="s2.glb" />
+      <xacro:property name="mesh" value="s2.dae" />
       <xacro:property name="collision">
         <origin xyz="0.0 0.0 ${0.038857/2.0}" rpy="0.0 0.0 0.0" />
         <geometry>
@@ -98,7 +98,7 @@ limitations under the License.
       <xacro:property name="dist_max" value="40.0" />
       <xacro:property name="dist_res" value="0.03" />
       <xacro:property name="std_dev" value="0.025" />
-      <xacro:property name="mesh" value="s1.glb" />
+      <xacro:property name="mesh" value="s1.dae" />
       <xacro:property name="collision">
         <origin xyz="0.0 0.0 0.025" rpy="0.0 0.0 0.0" />
         <geometry>
@@ -124,7 +124,7 @@ limitations under the License.
       <xacro:property name="dist_max" value="12.0" />
       <xacro:property name="dist_res" value="0.015" />
       <xacro:property name="std_dev" value="0.02" />
-      <xacro:property name="mesh" value="c1.glb" />
+      <xacro:property name="mesh" value="c1.dae" />
       <xacro:property name="collision">
         <origin xyz="0.0 0.0 ${0.0413/2.0}" rpy="0.0 0.0 0.0" />
         <geometry>
@@ -151,7 +151,7 @@ limitations under the License.
       <xacro:property name="dist_max" value="25.0" />
       <xacro:property name="dist_res" value="0.03" />
       <xacro:property name="std_dev" value="0.05" />
-      <xacro:property name="mesh" value="a3.glb" />
+      <xacro:property name="mesh" value="a3.dae" />
       <xacro:property name="collision">
         <origin xyz="0.0 0.0 ${0.041/2.0}" rpy="0.0 0.0 0.0" />
         <geometry>
@@ -177,7 +177,7 @@ limitations under the License.
       <xacro:property name="dist_max" value="12.0" />
       <xacro:property name="dist_res" value="0.03" />
       <xacro:property name="std_dev" value="0.05" />
-      <xacro:property name="mesh" value="a2.glb" />
+      <xacro:property name="mesh" value="a2.dae" />
       <xacro:property name="collision">
         <origin xyz="0.0 0.0 ${0.041/2.0}" rpy="0.0 0.0 0.0" />
         <geometry>
@@ -202,7 +202,7 @@ limitations under the License.
       <xacro:property name="dist_max" value="10.0" />
       <xacro:property name="dist_res" value="0.03" />
       <xacro:property name="std_dev" value="0.05" />
-      <xacro:property name="mesh" value="a2.glb" />
+      <xacro:property name="mesh" value="a2.dae" />
       <xacro:property name="collision">
         <origin xyz="0.0 0.0 ${0.041/2.0}" rpy="0.0 0.0 0.0" />
         <geometry>
@@ -227,7 +227,7 @@ limitations under the License.
       <xacro:property name="dist_max" value="10.0" />
       <xacro:property name="dist_res" value="0.03" />
       <xacro:property name="std_dev" value="0.05" />
-      <xacro:property name="mesh" value="a2.glb" />
+      <xacro:property name="mesh" value="a2.dae" />
       <xacro:property name="collision">
         <origin xyz="0.0 0.0 ${0.041/2.0}" rpy="0.0 0.0 0.0" />
         <geometry>
@@ -289,10 +289,10 @@ limitations under the License.
         <ray>
           <scan>
             <horizontal>
-              <samples>${samples}</samples>
+              <samples>${int(samples * 8/9)}</samples>
               <resolution>1</resolution>
-              <min_angle>-${pi}</min_angle>
-              <max_angle>${pi}</max_angle>
+              <min_angle>${pi/9}</min_angle>
+              <max_angle>${17*pi/9}</max_angle>
             </horizontal>
           </scan>
           <range>

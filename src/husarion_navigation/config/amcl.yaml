@@ -27,7 +27,7 @@ amcl:
     recovery_alpha_fast: 0.0
     recovery_alpha_slow: 0.0
     resample_interval: 1
-    robot_model_type: nav2_amcl::DifferentialMotionModel
+    robot_model_type: nav2_amcl::OmniMotionModel
     save_pose_rate: 0.5
     scan_topic: scan
     set_initial_pose: true
@@ -42,7 +42,8 @@ amcl:
     z_short: 0.05
     always_reset_initial_pose: true
     initial_pose:
-      x: 0.214
+      x: 0.64
       y: 0.047
       z: 0.0
-      yaw: -1.544
+      yaw: 0.0
+
